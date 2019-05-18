@@ -31,13 +31,14 @@ li a
     }
 }
 
-li {
+nav li
+{
     float: left;
     border-right: 1px solid #bbb;
 }
 
 
-li:last.child {
+li:last-child {
     border-right: none;
 }
 
@@ -49,6 +50,8 @@ ul {
     list-style-type: none;
     overflow: hidden;
     background-color: rgb(60, 20, 200);
+animation-name: animation;
+    animation-duration: 4s;
 }
 
 /*-------------------------Slut på kod för nav meny, början på kod för columnerna--------------------------------------------------------------------------------------------------------------*/
@@ -57,6 +60,7 @@ ul {
     float: left;
     width: 33.33%;
     background-color: hsla(0, 100%, 100%, 0.8);
+border-radius: 32px;
 }
 
 .row:after {
@@ -73,12 +77,46 @@ ul {
     }
 }
 
-/*-------------------------Slut på kod för columnerna----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------Slut på kod för columnerna, fortsätter med skrivstorlekar och färger----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-thead {color:green;}
+thead {color:green;} /*färgerna för listan så äventyrssidan*/
 tbody {color:blue;}
 tfoot {color:red;}
 
+p::first-letter {  /*första bokstaven är alltid större och lila*/
+    font-size: 200%;
+    color: #8A2BE2;
+}
+
+h1 {
+    font-size: 2vw; /*storelk på h1 och caption*/
+}
+
 caption {
-    font-size: 32px;
+    font-size: 2vw;
+}
+
+/*----------------------------------------------slut på skrivstorlekar och färger, början på animationer----------------------------------------------------------*/
+
+@keyframes animation
+{ /*Animationen för menyn i hubben*/
+    0% {
+        background - color: red;
+    }
+
+    25% {
+        background - color: yellow;
+    }
+
+    50% {
+        background - color: green;
+    }
+
+    75% {
+        background - color: teal;
+    }
+
+    100% {
+        background - color: rgb(60, 20, 200)
+    }
 }
